@@ -348,7 +348,7 @@ template {
 }
 
 .button--primary {
-  background-color: #E38873;
+  background-color: #E3B873;
   color: #fff;
 }
 
@@ -359,6 +359,7 @@ template {
 
 .header {
   background-color: #131313;
+  padding: 24px 0;
 }
 
 .menu {
@@ -374,7 +375,7 @@ template {
 }
 
 .logo {
-  color: #E38873;
+  color: #E3B873;
   text-transform: uppercase;
 }
 
@@ -386,7 +387,7 @@ template {
 }
 
 .phone {
-  color: #E38873;
+  color: #E3B873;
 }
 
 .contacts__phone {
