@@ -364,7 +364,7 @@ template {
 }
 
 .button--primary {
-  background-color: #E38873;
+  background-color: #E3B873;
   color: #fff;
 }
 
@@ -375,6 +375,7 @@ template {
 
 .header {
   background-color: #131313;
+  padding: 24px 0;
 }
 
 .menu {
@@ -390,7 +391,7 @@ template {
 }
 
 .logo {
-  color: #E38873;
+  color: #E3B873;
   text-transform: uppercase;
 }
 
@@ -402,11 +403,51 @@ template {
 }
 
 .phone {
-  color: #E38873;
+  color: #E3B873;
 }
 
 .contacts__phone {
   margin-right: 45px;
+}
+
+.hero {
+  position: relative;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.hero__instagram {
+  left: 0;
+  top: 0;
+  max-width: 80px;
+  position: absolute;
+}
+
+.instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #131313;
+  height: 100%;
+}
+
+.instagram__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #E3B873;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.title {
+  margin: 0;
 }
 
 body {
