@@ -875,6 +875,9 @@ img {
   .design__card {
     margin-bottom: 5.7rem;
   }
+  .section-title__description {
+    max-width: 48rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
