@@ -391,7 +391,7 @@ template {
 }
 
 .container {
-  width: 85%;
+  width: 87%;
   max-width: 1256px;
   margin: auto;
 }
@@ -445,10 +445,12 @@ img {
 
 .section-title__description {
   margin: auto;
-  margin-top: 1.64rem;
+  margin-top: 1.4rem;
   font-size: 1.07rem;
-  line-height: 135.84%;
-  max-width: 21.86rem;
+  line-height: 1.929rem;
+  min-width: 52.93rem;
+  font-size: 1.429rem;
+  font-family: 'Futura Book';
 }
 
 .section-title__heading {
@@ -500,6 +502,7 @@ img {
   background-color: #E3B873;
   color: #fff;
   padding: 1.214rem 2.6rem;
+  min-width: 228px;
 }
 
 .header {
@@ -599,6 +602,7 @@ img {
 }
 
 .hero__text {
+  padding: 0;
   font-size: 1.57rem;
   max-width: 500px;
   line-height: 2.14rem;
@@ -852,6 +856,27 @@ img {
           flex-direction: column;
 }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  .nav__item {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+  .hero__instagram {
+    display: none;
+  }
+  .hero__content {
+    margin-left: 0;
+  }
+}
+
 @media screen and (min-width: 760px) {
   .row {
     -webkit-box-orient: horizontal;
@@ -877,27 +902,6 @@ img {
   }
   .section-title__description {
     max-width: 48rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 12px;
-  }
-  .nav__item {
-    margin-right: 1rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-  .hero__instagram {
-    display: none;
-  }
-  .hero__content {
-    margin-left: 0;
   }
 }
 
@@ -933,6 +937,92 @@ img {
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .html {
+    font-size: 12px;
+  }
+  .header {
+    max-width: 375px;
+  }
+  .header__logo {
+    font-family: 'Futura Demi';
+    line-height: 1.166rem;
+  }
+  .container {
+    width: 91.8%;
+    margin-top: 0;
+  }
+  .hero {
+    padding-top: 128px;
+    background: #131313 url("../img/hero-bg-small.jpg") no-repeat center/cover;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hero__content {
+    margin: 0;
+    width: 100%;
+  }
+  .hero__title {
+    font-size: 1.916rem;
+  }
+  .hero__text {
+    font-size: 1.5rem;
+    width: 321px;
+  }
+  .hero__button {
+    font-size: 1.083rem;
+    line-height: 1.25rem;
+    width: 100%;
+    min-width: 338px;
+    margin-bottom: 26px;
+  }
+  .section-title {
+    margin-bottom: 40px;
+  }
+  .section-title__heading {
+    font-size: 1.83rem;
+    margin-bottom: 17px;
+  }
+  .section-title__description {
+    min-width: 0;
+    max-width: 306px;
+    font-size: 15px;
+  }
+  .card {
+    margin-bottom: 79px;
+  }
+  .card__text {
+    padding-bottom: 37px;
+    margin-top: -147px;
+    width: 215px;
+    font-size: 1.083rem;
+    width: 270px;
+  }
+  .card__title {
+    padding: 0 0 0 1rem;
+  }
+  .card__list {
+    padding: 0 0 0 1rem;
+    margin-bottom: 0;
+  }
+  .card__item {
+    margin-bottom: 1.3px;
+  }
+  .card__item--points::after {
+    content: '...';
+  }
+  .card__item--no-mobile {
+    display: none;
+  }
+  .card__pricetag {
+    padding: 11px 19px;
+    font-size: 15px;
+    min-width: 190px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
