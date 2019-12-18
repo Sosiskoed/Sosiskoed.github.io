@@ -844,7 +844,6 @@ img {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,6 +861,7 @@ img {
 }
 
 .modal__dialog {
+  z-index: 201;
   position: relative;
   max-width: 36.36rem;
   background: #131313 url("../img/bg-lines.svg") no-repeat center;
@@ -915,6 +915,18 @@ img {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-transform: uppercase;
+}
+
+.modal__veil {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
 }
 
 @media screen and (max-width: 1200px) {
