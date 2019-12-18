@@ -30,4 +30,20 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
 
+//Code for button to top
+  var btnToTop = $('#to-top');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btnToTop.addClass('show');
+    } else {
+      btnToTop.removeClass('show');
+    }
+  });
+
+  btnToTop.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
 });

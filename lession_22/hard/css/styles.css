@@ -362,6 +362,7 @@ template {
   border: none;
   border-radius: 2px;
   font-size: 0.93rem;
+  text-align: center;
 }
 
 .button:hover {
@@ -449,6 +450,29 @@ template {
   border-radius: 1px;
   cursor: pointer;
   margin-right: 0.64rem;
+}
+
+#to-top {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#to-top:hover {
+  cursor: pointer;
+}
+
+#to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .container {
