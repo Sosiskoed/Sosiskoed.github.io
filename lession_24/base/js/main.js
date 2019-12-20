@@ -33,4 +33,40 @@ $(document).ready(function () {
   //WOW JS for animations
   new WOW().init();
 
+  //Валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    // Сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательо укажите email",
+        email: "Введите в формате: name@domain.com",
+      }
+    }
+   });
+
+   // Маска для телефона
+   $('[type]=tel').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
 });
