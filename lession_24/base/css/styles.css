@@ -458,7 +458,7 @@ template {
           justify-content: center;
 }
 
-label.invalid {
+div.invalid {
   color: tomato;
 }
 
@@ -1107,6 +1107,9 @@ img {
 
 .footer__input {
   padding-top: 0.3rem;
+}
+
+.footer__input-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1119,7 +1122,7 @@ img {
   margin-bottom: 3.2rem;
 }
 
-.footer__input--full-width {
+.footer__input-group--full-width {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 2rem;

@@ -33,7 +33,7 @@ $(document).ready(function () {
   //WOW JS for animations
   new WOW().init();
 
-  //Валидация формы
+  //Валидация формы модального окна
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -66,7 +66,34 @@ $(document).ready(function () {
     }
    });
 
+     //Валидация формы футера
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: "required"
+    },
+
+    // Сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+      userQuestion: "Обязательно напишите ваш вопрос"
+    }
+   });
+
    // Маска для телефона
-   $('[type]=tel').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 });
