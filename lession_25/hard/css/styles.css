@@ -1144,6 +1144,10 @@ img {
   padding: 4.285rem 0;
 }
 
+.footer__map {
+  min-height: 465px;
+}
+
 .modal {
   opacity: 0;
   visibility: hidden;
