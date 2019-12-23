@@ -993,6 +993,8 @@ img {
 
 .control__button {
   padding: 1.2857rem 4.7857rem;
+  font-size: 1.071rem;
+  text-transform: uppercase;
 }
 
 .control__policy {
@@ -1137,6 +1139,8 @@ img {
 .footer__button {
   margin: auto;
   padding: 1.285rem 4.785rem;
+  font-size: 1.071rem;
+  text-transform: uppercase;
 }
 
 .footer__menu {
