@@ -66,6 +66,31 @@ $(document).ready(function () {
     }
    });
 
+  //Валидация формы в блоке Контроля
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект
+    },
+    // Сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Телефон обязателен",
+    }
+   });
+
      //Валидация формы футера
   $('.footer__form').validate({
     errorClass: "invalid",
