@@ -622,6 +622,33 @@ img {
   padding: 1.214rem 2.6rem;
 }
 
+@-webkit-keyframes slideUp {
+  0% {
+    margin-top: 500px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    margin-top: 500px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.animated {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
 .header {
   position: fixed;
   left: 0;

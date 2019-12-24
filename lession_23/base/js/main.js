@@ -33,4 +33,13 @@ $(document).ready(function () {
   //WOW JS for animations
   new WOW().init();
 
+  //Код для анимации, библиотека viewportchecker
+  $('.control__text').viewportChecker({
+    classToAdd: 'animated'
+});
+
+  $('.control__form').viewportChecker({
+    classToAdd: 'animated'
+});
+
 });
