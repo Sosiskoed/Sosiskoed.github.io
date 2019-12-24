@@ -33,13 +33,22 @@ $(document).ready(function () {
   //WOW JS for animations
   new WOW().init();
 
-  //Код для анимации, библиотека viewportchecker
-  $('.control__text').viewportChecker({
-    classToAdd: 'animated'
-});
-
-  $('.control__form').viewportChecker({
-    classToAdd: 'animated'
-});
+  //Код для анимации
+  $(function() {
+    var distance_text = $('.control__text').offset().top - $(window).height(),
+        distance_form = $('.control__form').offset().top - $(window).height(),
+        $text = $('.control__text'),
+        $form = $('.control__form');
+ 
+    $(window).scroll(function(){
+ 
+        if  ($(window).scrollTop() > distance_text && $(window).scrollTop() < distance_text + 100)
+            $text.addClass('animated');
+ 
+        if  ($(window).scrollTop() > distance_form && $(window).scrollTop() < distance_form + 100)
+            $form.addClass('animated');
+    });
+ 
+  });
 
 });
