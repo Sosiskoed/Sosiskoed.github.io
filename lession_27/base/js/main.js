@@ -10,6 +10,13 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
+  var thanks = $('.modal-thanks'),
+      thanksCloseBtn = $('.modal-thanks__close');
+
+  thanksCloseBtn.on('click', function () {
+    thanks.toggleClass('modal-thanks--visible');
+  });
+
   //Слайдер
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -64,15 +71,16 @@ $(document).ready(function () {
         email: "Введите в формате: name@domain.com",
       }
     },
+    //AJAX
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          thanks.addClass('modal-thanks--visible');
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
@@ -80,6 +88,46 @@ $(document).ready(function () {
       });
     }
    });
+
+ //Валидация формы блока контроля
+ $('.control__form').validate({
+  errorClass: "invalid",
+  errorElement: "div",
+  rules: {
+    // Строчное правило
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+  },
+  // Сообщения
+  messages: {
+    userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв",
+      maxlength: "Имя не длиннее пятнадцати букв"
+    },
+    userPhone: "Телефон обязателен",
+  },
+  //AJAX
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        $(form)[0].reset();
+        modal.removeClass('modal--visible');
+        thanks.addClass('modal-thanks--visible');
+      },
+      error: function(response) {
+        console.error('Ошибка запроса ' + response);
+      },
+    });
+  }
+ });
 
      //Валидация формы футера
   $('.footer__form').validate({
@@ -105,6 +153,22 @@ $(document).ready(function () {
       },
       userPhone: "Телефон обязателен",
       userQuestion: "Обязательно напишите ваш вопрос"
+    },
+    //AJAX
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          thanks.addClass('modal-thanks--visible');
+        },
+        error: function(response) {
+          console.error('Ошибка запроса ' + response);
+        },
+      });
     }
    });
 

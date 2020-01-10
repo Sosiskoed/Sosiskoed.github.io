@@ -1155,7 +1155,7 @@ img {
   min-height: 465px;
 }
 
-.modal {
+.modal, .modal-thanks {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1178,12 +1178,12 @@ img {
           align-items: center;
 }
 
-.modal--visible {
+.modal--visible, .modal-thanks--visible {
   opacity: 1;
   visibility: visible;
 }
 
-.modal__dialog {
+.modal__dialog, .modal-thanks__dialog {
   position: relative;
   max-width: 36.36rem;
   background: #131313 url("../img/bg-lines.svg") no-repeat center;
@@ -1191,7 +1191,7 @@ img {
   color: #fff;
 }
 
-.modal__close {
+.modal__close, .modal-thanks__close {
   position: absolute;
   top: 0;
   right: 0;
@@ -1203,7 +1203,7 @@ img {
   cursor: pointer;
 }
 
-.modal__title {
+.modal__title, .modal-thanks__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.357rem;
   text-align: center;
@@ -1211,7 +1211,7 @@ img {
   margin-bottom: 2.428rem;
 }
 
-.modal__form {
+.modal__form, .modal-thanks__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1221,7 +1221,7 @@ img {
           flex-direction: column;
 }
 
-.modal__input-group {
+.modal__input-group, .modal-thanks__input-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1232,15 +1232,15 @@ img {
   margin-bottom: 3.428rem;
 }
 
-.modal__input:last-of-type {
+.modal__input:last-of-type, .modal-thanks__input:last-of-type {
   margin-bottom: 1rem;
 }
 
-.modal__policy {
+.modal__policy, .modal-thanks__policy {
   margin-bottom: 2.7rem;
 }
 
-.modal__button {
+.modal__button, .modal-thanks__button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-transform: uppercase;
