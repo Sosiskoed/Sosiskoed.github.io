@@ -335,9 +335,6 @@ function init () {
   myMap.geoObjects.add(myPlacemark); // помещаем флажок на карту
   myMap.behaviors.disable('scrollZoom'); //Отключаем скролл мышкой
  
-  // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
-  var layer = myMapTemp.layers.get(0).get(0);
- 
   // Решение по callback-у для определения полной загрузки карты
   waitForTilesLoad(layer).then(function() {
   });

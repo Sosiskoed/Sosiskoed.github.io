@@ -1,9 +1,20 @@
+@media screen and ( max-width: 1420px )
+  .advantages
+    &__col
+      margin-right: 1px
+
+
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
   .nav
     &__item
       margin-right: 1rem
+      
+@media screen and ( min-width: 993px )
+  
+  .contacts-small
+    display: none
 
 @media screen and ( max-width: 992px )
   .nav
@@ -12,7 +23,173 @@
     &__instagram
       display: none
     &__content
+      display: flex
+      flex-direction: column
+      text-align: left
+    &__button
+      margin-bottom: 26px
+
+    
+  .projects
+    &__row
+      flex-direction: column-reverse
+      align-items: center
+
+  .control
+    &__container
+      width: 100%
+      background: $dark
+    &__text
+      color: $light
+    &__label
+      color: $secondary
+    &__input
+      min-width: 360px
+      margin-bottom: 63px
+      &:nth-last-child()
+        margin-bottom: 28px
+      &::placeholder
+        color: $light
+    &__policy
+      &-label
+        color: $light
+        margin-bottom: 78px
+    &__form
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__button
+      min-width: 340px
+      order: 4
+      padding: 20px 124px
+      font-style: normal
+      font-weight: 500
+      font-size: 15px
+      line-height: 26px
+      margin-bottom: -30px
+    
+  .types
+    &__section
+      &-title
+        margin-top: 92px
+        margin-bottom: 40px
+    &__row
+      display: flex
+      flex-direction: column
+  .card
+    margin-top: 30px
+    &__title
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 138.6%
+    &__item
+      font-style: normal
+      font-weight: normal
+      font-size: 13px
+      line-height: 169.8%
+    &__pricetag
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 138.6%
+    &__text
       margin-left: 0
+      margin-right: auto
+
+  .advantages
+    display: none
+
+  .dreams
+    margin-top: 400px
+    height: 200px
+    background: $dark
+    &::before
+     display: none 
+    &__item
+      display: none
+    &__image
+      display: none
+      &-small
+        display: block
+        transform: translate(0%, -40%)
+    &__row
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__heading
+      margin-top: -400px
+      text-align: center
+
+  .design
+    background-color: $dark
+    margin-top: 0
+    &__section
+      &-title
+        color: $light
+    &__row
+      display: flex
+      flex-direction: column
+    &__card
+      margin-bottom: 30px
+      
+  .team
+    background-color: $dark
+    &__section
+      &-title
+        color: $light
+    &__text
+      display: none
+    &__row
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-card
+      margin-top: 80px
+      margin-bottom: 80px
+    
+  .clients
+    display: none
+  
+  .footer
+    background: $dark
+    &__wrap
+      background: $dark
+      max-width: 100%
+      width: 100vw
+      padding: 0
+      margin: 0
+      margin-bottom: 30px
+    &__form
+      display: flex
+      flex-direction: column
+    &__button
+      min-width: 340px
+  
+  .footer
+    &__menu
+      display: none
+  
+  .contacts
+    &-small
+      display: flex
+      flex-direction: column
+      align-tems: center
+      margin: auto
+      &__text
+        font-family: Yeseva One
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 138.6%
+        text-align: center
+        text-transform: uppercase
+        color: $primary
+    &__buttons-group
+      display: flex
+      flex-direction: row
+      justify-content: center
+
 
 @media screen and ( max-width: 760px )
   .row
