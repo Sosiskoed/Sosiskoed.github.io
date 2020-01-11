@@ -1092,7 +1092,7 @@ img {
 .steps-slide__heading {
   text-transform: uppercase;
   max-width: 262px;
-  font-family: Yeseva One;
+  font-family: 'Yeseva One', cursive;
   font-weight: normal;
   font-size: 15px;
   line-height: 23px;
@@ -1149,7 +1149,6 @@ img {
 
 .team__section {
   margin-top: -460px;
-  padding-bottom: 40rem;
 }
 
 .team__description {
@@ -1259,6 +1258,107 @@ img {
 
 .team-card--third::before {
   background: #e3b873 url(../img/team/icon-3.svg) no-repeat center;
+}
+
+.clients {
+  padding-bottom: 40rem;
+}
+
+.clients__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clients-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  padding: 1.7rem 1.4rem;
+  -webkit-box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
+          box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
+}
+
+.clients-card__client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.clients-card__image {
+  border-radius: 50%;
+  margin-right: 1.65rem;
+}
+
+.clients-card__name {
+  max-width: 14.28rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.28rem;
+  line-height: 1.64rem;
+}
+
+.clients-card__text {
+  max-width: 324px;
+  font-family: 'Futura Book';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 180%;
+  color: #959595;
+  padding-bottom: 43px;
+}
+
+.clients-card__data {
+  position: absolute;
+  bottom: -2.1rem;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients-card__data-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #e3b873;
+  color: #ffffff;
+  padding: 0.785rem 1.5rem 0.785rem 1rem;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.214rem;
+  letter-spacing: 1px;
+}
+
+.clients-card__data-item--first {
+  width: 9.6rem;
+  margin-right: 1px;
+}
+
+.clients-card__data-item--second {
+  width: 11.3rem;
 }
 
 .footer {
