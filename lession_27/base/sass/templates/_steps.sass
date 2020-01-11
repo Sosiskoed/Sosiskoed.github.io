@@ -1,0 +1,136 @@
+.steps
+  &__section
+    padding-top: 35rem
+    padding-bottom: 35rem
+  &__row 
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__point
+    font-family: 'Yeseva One', cursive
+    font-size: 1.07rem
+    line-height: 1.5rem
+    width: 1.5rem
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    &::after
+      content: ''
+      width: 100%
+      height: 2px
+      background-color: #e3b873
+  &__item
+    display: block
+    width: 18%
+    opacity: 0.5
+    margin-top: 1.6rem
+  &__span
+    &--top
+      position: absolute
+      top: -2.7rem
+      left: 0
+      margin-bottom: 0rem
+      font-size: 1.07rem
+      text-transform: uppercase
+      letter-spacing: 0.5px
+  &__title
+    margin-top: 0
+    &--left
+      text-align: left
+  &__heading
+    margin-top: 0
+    font-size: 1.9rem
+  &__word
+    margin-bottom: 6rem
+    &::after
+      width: 6.6rem
+      margin-left: 6.2rem
+  &__counter
+    font-family: 'Yeseva One', cursive
+    font-size: 1.3rem
+    line-height: 25px
+    text-transform: uppercase
+    letter-spacing: 0.1px
+    color: #ffffff
+  &-wrapper
+    position: relative
+    width: 100%
+    height: 100%
+    display: flex
+    transition-property: transform
+    box-sizing: content-box
+    transition-duration: 0ms
+    transform: translate3d(0px, 0px, 0px)
+  &__step
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 1.9rem
+  &-slide
+    &__button-prev, &__button-next
+      bottom: 0 !important
+      top: auto !important
+      background-size: 48px
+      width: 48px !important
+      height: 14px !important
+    &__button-prev 
+      left: 0 !important
+      background: url(../img/arrow-prev.svg) no-repeat center
+    &__button-next
+    background: url(../img/arrow-next.svg) no-repeat center
+    &__first
+      padding-left: 0.2rem
+      flex-direction: column
+    &__first p:last-child
+      margin-bottom: 6.6rem
+    &__heading 
+      max-width: 12rem
+      margin-bottom: 0.7rem
+      font-family: Yeseva One
+      font-size: 1.07rem
+      line-height: 1.8rem
+      text-transform: uppercase
+      color: #e3b873
+    &__text 
+    max-width: 24rem
+    font-size: 1.07rem
+    line-height: 1.8rem
+    margin: 0
+    margin-bottom: 1rem
+  &__description
+    max-width: 10rem
+    display: block
+    margin-top: 0.6rem
+    font-size: 1.07rem
+    line-height: 1.4rem
+  &-swiper
+    &__wrapper
+      display: flex
+      justify-content: space-between
+  &-slide
+    &__image
+      margin-top: 3.15rem
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+.section
+  &-title
+    &__heading
+      text-transform: uppercase
+      font-family: 'Yeseva one', cursive
+      line-height: 138%
+      &--primary 
+        color: #e3b873
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 90px
+        height: 2px
+        margin-left: 2rem
+        background-color: #e3b873

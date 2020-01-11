@@ -1382,8 +1382,56 @@ img {
   margin-bottom: 2.78rem;
 }
 
-.steps__container--relative {
-  position: relative;
+.steps__section {
+  padding-top: 35rem;
+  padding-bottom: 35rem;
+}
+
+.steps__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps__point {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.07rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.steps__point::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #e3b873;
+}
+
+.steps__item {
+  display: block;
+  width: 18%;
+  opacity: 0.5;
+  margin-top: 1.6rem;
 }
 
 .steps__span--top {
@@ -1431,7 +1479,6 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1441,6 +1488,10 @@ img {
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  -webkit-transition-duration: 0ms;
+          transition-duration: 0ms;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 
 .steps__step {
@@ -1499,6 +1550,35 @@ img {
   color: #e3b873;
 }
 
+.steps__description {
+  max-width: 10rem;
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.07rem;
+  line-height: 1.4rem;
+}
+
+.steps-swiper__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps-slide__image {
+  margin-top: 3.15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .section-title__heading {
   text-transform: uppercase;
   font-family: 'Yeseva one', cursive;
@@ -1527,7 +1607,7 @@ img {
 }
 
 .team__section {
-  margin-top: -460px;
+  margin-top: -500px;
 }
 
 .team__description {
