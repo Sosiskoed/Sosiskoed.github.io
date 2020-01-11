@@ -37,6 +37,59 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
 
+  //Слайдер для блока 6 шагов к успеху
+  var mySwiper2 = new Swiper ('.steps__swiper-container2', {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.steps-slide__button-next',
+      prevEl: '.steps-slide__button-prev',
+    },
+    // If we need pagination
+    pagination: {
+      el: '.steps-slide__pagination2',
+      type: 'bullets',
+    },
+  });
+
+  //  Steps swiper - image slider for steps section
+  var mySwiper3 = new Swiper ('.steps__swiper-container3', {
+    slidesPerView: 1,
+    // If we need pagination
+    pagination: {
+      el: '.steps-slide__pagination3',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.steps-slide__button-next',
+      prevEl: '.steps-slide__button-prev',
+    },
+  });
+  // Width between pagination bullets 
+  var stepsNext = $('.steps-slide__button-next');
+  var stepsPrev = $('.steps-slide__button-prev');
+  var stepsBullets = $('.steps-slide__pagination2');
+
+  stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 20)
+  stepsBullets.css('left', stepsPrev.width() + 17) 
+
+  //  Fantasy swiper - image slider for steps section
+  var mySwiper4 = new Swiper ('.fantasy__swiper-container', {
+    direction: 'vertical',
+    centeredSlides: true,
+    slidesPerView: 1,
+  });
+  //  Fantasy swiper - image slider for steps section
+  var mySwiper5 = new Swiper ('.fantasy-mobile__swiper-container', {
+    centeredSlides: true,
+    slidesPerView: 1,
+    navigation: {
+      prevEl: '.fantasy-mobile__button-prev',
+      nextEl: '.fantasy-mobile__button-next',
+    },
+  });
+
   //WOW JS for animations
   new WOW().init();
 

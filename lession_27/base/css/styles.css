@@ -515,6 +515,10 @@ img {
   padding: 60px 0;
 }
 
+.section--no-bottom-padding {
+  padding-bottom: 0;
+}
+
 .section--dark {
   background-color: #131313;
   color: #fff;
@@ -595,6 +599,10 @@ img {
   font-size: 1.28rem;
   line-height: 2.07rem;
   max-width: 31.57rem;
+}
+
+.container--design {
+  margin-bottom: -400px;
 }
 
 .card__image {
@@ -1063,12 +1071,80 @@ img {
   padding: 1.214rem 2.6rem;
 }
 
-.design {
-  padding-bottom: 30rem;
-}
-
 .design__section-title {
   margin-bottom: 2.78rem;
+}
+
+.steps {
+  padding-top: 428px;
+  padding-bottom: 35rem;
+}
+
+.steps__span {
+  max-width: 174px;
+}
+
+.steps__title {
+  max-width: 253px;
+  margin-right: 100px;
+}
+
+.steps-slide__heading {
+  text-transform: uppercase;
+  max-width: 262px;
+  font-family: Yeseva One;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  color: #E3B873;
+}
+
+.steps-slide__text {
+  max-width: 337px;
+}
+
+.steps-slide__first p:last-child {
+  margin-bottom: 6.6rem;
+}
+
+.steps__step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1.9rem;
+}
+
+.steps__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps__row:last-child {
+  margin-bottom: 3rem;
+}
+
+.steps__item {
+  width: 18%;
+  margin-top: 1.6rem;
+}
+
+.col-40 {
+  width: 40%;
+  padding-right: 137px;
+}
+
+.col-60 {
+  width: 60%;
 }
 
 .footer {
