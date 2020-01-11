@@ -1,0 +1,56 @@
+.dreams
+  position: relative
+  padding-bottom: -20rem
+  background: $dark url('../img/dream/dream-bg.jpg') no-repeat center / cover
+  height: 840px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.7)
+  &__image
+    z-index: 5
+    margin-bottom: 40px
+    &-container
+      position: relative
+      &--first
+        margin-top: -120px
+      &--second
+        margin-top: -200px
+  &__item
+    color: $light
+    font-family: 'FuturaLightC'
+    font-style: normal
+    font-weight: 50
+    font-size: 20px
+    line-height: 172.4%
+    margin-bottom: 14px
+    &:hover
+      color: $primary
+      text-decoration: underline
+      cursor: pointer
+.section
+  &-title
+    &--dreams
+      z-index: 5
+      max-width: 411px
+      position: relative
+      text-align: left
+    &__heading
+      font-family: 'FuturaLightC'
+      font-style: normal
+      font-weight: normal
+      font-size: 27px
+      line-height: 37px
+      text-transform: uppercase
+      margin-bottom: 47px
+      &--primary
+        color: #E3B873
+    &__list
+      list-style-type: none
+      &--left
+        padding-left: 0
+

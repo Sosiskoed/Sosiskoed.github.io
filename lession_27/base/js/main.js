@@ -40,7 +40,6 @@ $(document).ready(function () {
   //Слайдер для блока 6 шагов к успеху
   var mySwiper2 = new Swiper ('.steps__swiper-container2', {
     // Optional parameters
-    loop: false,
     slidesPerView: 1,
     navigation: {
       nextEl: '.steps-slide__button-next',

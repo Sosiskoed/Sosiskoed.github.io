@@ -489,6 +489,21 @@ input.invalid {
       flex-basis: 30%;
 }
 
+.col-35 {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.col-45 {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.col-60 {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
 .col-50 {
   width: 50%;
 }
@@ -1072,6 +1087,7 @@ img {
 }
 
 .advantages {
+  padding-bottom: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1115,19 +1131,6 @@ img {
   margin-left: -17.5rem;
   width: 45rem;
   height: 45rem;
-}
-
-.advantages__block::before {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: -0.5rem;
-  right: -11rem;
-  width: 100%;
-  height: 125%;
-  background-image: url(../img/ellipse.svg);
-  background-position: left top;
-  background-repeat: no-repeat;
 }
 
 .advantages__item {
@@ -1255,6 +1258,126 @@ img {
   text-transform: uppercase;
 }
 
+.advantages__economy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.71rem;
+}
+
+.advantages__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-left: 7rem;
+  margin-right: 2rem;
+  background-color: #e3b873;
+  border-radius: 50%;
+}
+
+.advantages__info {
+  font-family: 'Futura Demi';
+  font-size: 1.428rem;
+  line-height: 1.785rem;
+  color: #e3b873;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+.dreams {
+  position: relative;
+  padding-bottom: -20rem;
+  background: #131313 url("../img/dream/dream-bg.jpg") no-repeat center/cover;
+  height: 840px;
+}
+
+.dreams::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.7);
+}
+
+.dreams__image {
+  z-index: 5;
+  margin-bottom: 40px;
+}
+
+.dreams__image-container {
+  position: relative;
+}
+
+.dreams__image-container--first {
+  margin-top: -120px;
+}
+
+.dreams__image-container--second {
+  margin-top: -200px;
+}
+
+.dreams__item {
+  color: #fff;
+  font-family: 'FuturaLightC';
+  font-style: normal;
+  font-weight: 50;
+  font-size: 20px;
+  line-height: 172.4%;
+  margin-bottom: 14px;
+}
+
+.dreams__item:hover {
+  color: #E3B873;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section-title--dreams {
+  z-index: 5;
+  max-width: 411px;
+  position: relative;
+  text-align: left;
+}
+
+.section-title__heading {
+  font-family: 'FuturaLightC';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-bottom: 47px;
+}
+
+.section-title__heading--primary {
+  color: #E3B873;
+}
+
+.section-title__list {
+  list-style-type: none;
+}
+
+.section-title__list--left {
+  padding-left: 0;
+}
+
+.design {
+  margin-bottom: 0;
+  margin-top: 5rem;
+}
+
 .design__section-title {
   margin-bottom: 2.78rem;
 }
@@ -1325,10 +1448,6 @@ img {
 .col-40 {
   width: 40%;
   padding-right: 137px;
-}
-
-.col-60 {
-  width: 60%;
 }
 
 .team__section {
