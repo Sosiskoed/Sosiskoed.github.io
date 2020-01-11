@@ -311,7 +311,7 @@ function init () {
   var myMap = new ymaps.Map("map-yandex", {
     center: [47.244734, 39.723227], // координаты центра на карте
     zoom: 9, // коэффициент приближения карты
-    controls: ['fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
+    controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
   var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     hintContent: 'Наш офис',
