@@ -37,9 +37,13 @@ $(document).ready(function () {
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
 
-  //Слайдер для блока 6 шагов к успеху
+  next.css('left', prev.width() + 20 + bullets.width()+10)
+  bullets.css('left', prev.width() + 20)
+
+  //  Steps swiper - text slider for steps section
   var mySwiper2 = new Swiper ('.steps__swiper-container2', {
     // Optional parameters
+    loop: false,
     slidesPerView: 1,
     navigation: {
       nextEl: '.steps-slide__button-next',
@@ -52,7 +56,7 @@ $(document).ready(function () {
     },
   });
 
-  //Слайдер изображений в секции 6 шагов
+  //  Steps swiper - image slider for steps section
   var mySwiper3 = new Swiper ('.steps__swiper-container3', {
     slidesPerView: 1,
     // If we need pagination
@@ -71,7 +75,7 @@ $(document).ready(function () {
   var stepsBullets = $('.steps-slide__pagination2');
 
   stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 20)
-  stepsBullets.css('left', stepsPrev.width() + 17)
+  stepsBullets.css('left', stepsPrev.width() + 17) 
 
   //WOW JS for animations
   new WOW().init();
