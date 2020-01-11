@@ -692,6 +692,11 @@ img {
   text-transform: uppercase;
 }
 
+.logo__reference {
+  text-decoration: none;
+  color: #E3B873;
+}
+
 .nav__item {
   color: #fff;
   text-decoration: none;
@@ -1037,6 +1042,7 @@ img {
 .video__play {
   position: relative;
   margin: auto;
+  cursor: pointer;
 }
 
 .types__section-title {

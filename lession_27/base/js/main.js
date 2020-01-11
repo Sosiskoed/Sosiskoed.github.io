@@ -121,6 +121,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
           thanks.addClass('modal-thanks--visible');
+          ym(65036671, 'reachGoal', 'submitForm'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
@@ -170,6 +171,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
           thanks.addClass('modal-thanks--visible');
+          ym(65036671, 'reachGoal', 'submitForm'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
@@ -210,6 +212,7 @@ $(document).ready(function () {
         $(form)[0].reset();
         modal.removeClass('modal--visible');
         thanks.addClass('modal-thanks--visible');
+        ym(65036671, 'reachGoal', 'submitForm'); return true;
       },
       error: function(response) {
         console.error('Ошибка запроса ' + response);
@@ -253,6 +256,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
           thanks.addClass('modal-thanks--visible');
+          ym(65036671, 'reachGoal', 'submitForm'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
@@ -418,5 +422,21 @@ $(function() {
   ymap();
  
 });
+
+//Вставка видео с заглушкой
+var playerp;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '465',
+    width: '100%',
+    videoId: 'RHzzLqJWqHs',
+    events: {
+      'onReady': videoPlay,
+    }
+  });
+})
+function videoPlay(event) {
+  event.target.playVideo();
+}
 
 });
