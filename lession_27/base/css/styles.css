@@ -383,12 +383,18 @@ template {
 .button--primary:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+  background-color: #D2A762;
 }
 
 .button--outline {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
+}
+
+.button--outline:hover {
+  -webkit-box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .label {
@@ -405,6 +411,7 @@ template {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 1.285rem;
   padding: 0.5rem 0;
+  outline: none;
 }
 
 .input--light {
@@ -468,6 +475,20 @@ div.invalid {
 
 input.invalid {
   border-bottom: 1px solid tomato;
+}
+
+.phone:hover {
+  cursor: pointer;
+  color: #D2A762;
+}
+
+.logo__reference:hover {
+  cursor: pointer;
+  color: #D2A762;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  outline: none;
 }
 
 .container {
@@ -576,11 +597,16 @@ img {
 .section-title__heading {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 1.43rem;
   line-height: 2rem;
   margin-bottom: 0.93rem;
   line-height: 138%;
+  font-style: normal;
+}
+
+.section-title__heading--primary {
+  color: #E3B873;
 }
 
 .section-title__heading--primary {
@@ -1352,6 +1378,7 @@ img {
 
 .dreams__image-container--first {
   margin-top: -120px;
+  margin-right: 40px;
 }
 
 .dreams__image-container--second {
@@ -1364,7 +1391,7 @@ img {
 
 .dreams__item {
   color: #fff;
-  font-family: 'FuturaLightC';
+  font-family: 'Futura Book';
   font-style: normal;
   font-weight: 50;
   font-size: 20px;
@@ -1383,20 +1410,6 @@ img {
   max-width: 411px;
   position: relative;
   text-align: left;
-}
-
-.section-title__heading {
-  font-family: 'FuturaLightC';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 27px;
-  line-height: 37px;
-  text-transform: uppercase;
-  margin-bottom: 47px;
-}
-
-.section-title__heading--primary {
-  color: #E3B873;
 }
 
 .section-title__list {
@@ -1527,7 +1540,7 @@ img {
 }
 
 .clients {
-  padding-bottom: 40rem;
+  padding-bottom: 25rem;
 }
 
 .clients__row {
@@ -1634,7 +1647,7 @@ img {
 }
 
 .footer__wrap {
-  background-color: #181818;
+  background: #181818 url("../img/form-bg.svg") no-repeat center/cover;
   max-width: 63.07rem;
   margin: auto;
   margin-top: -20rem;
@@ -1744,6 +1757,7 @@ img {
   background-size: cover;
   -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }
 
 /* Блок, в котором появится Яндекс.Карта */
@@ -2111,7 +2125,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    align-tems: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
   }
   .contacts-small__text {

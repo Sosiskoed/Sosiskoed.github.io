@@ -96,7 +96,15 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyСheckbox: "required",
+      errorPlacement: function (error, element) {
+        if (element.attr("type") == "checkbox") {
+            return element.next('label').append(error);
+        }
+    
+         error.insertAfter($(element));
+    },
     },
     // Сообщения
     messages: {
@@ -109,8 +117,11 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательо укажите email",
         email: "Введите в формате: name@domain.com",
-      }
+      },
+      policyСheckbox: "Не забудьте принять условия политики"
     },
+
+    
     //AJAX
     submitHandler: function(form) {
       $.ajax({
@@ -146,7 +157,15 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyСheckbox: "required",
+      errorPlacement: function (error, element) {
+        if (element.attr("type") == "checkbox") {
+            return element.next('label').append(error);
+        }
+    
+         error.insertAfter($(element));
+    },
     },
     // Сообщения
     messages: {
@@ -159,7 +178,8 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательо укажите email",
         email: "Введите в формате: name@domain.com",
-      }
+      },
+      policyСheckbox: "Не забудьте принять условия политики"
     },
     //AJAX
     submitHandler: function(form) {
@@ -192,6 +212,14 @@ $(document).ready(function () {
       maxlength: 15
     },
     userPhone: "required",
+    policyСheckbox: "required",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
   },
   // Сообщения
   messages: {
@@ -201,6 +229,7 @@ $(document).ready(function () {
       maxlength: "Имя не длиннее пятнадцати букв"
     },
     userPhone: "Телефон обязателен",
+    policyСheckbox: "Не забудьте принять условия политики"
   },
   //AJAX
   submitHandler: function(form) {
@@ -233,7 +262,15 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      userQuestion: "required"
+      userQuestion: "required",
+      policyСheckbox: "required",
+      errorPlacement: function (error, element) {
+        if (element.attr("type") == "checkbox") {
+            return element.next('label').append(error);
+        }
+    
+         error.insertAfter($(element));
+    },
     },
 
     // Сообщения
@@ -244,7 +281,8 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее пятнадцати букв"
       },
       userPhone: "Телефон обязателен",
-      userQuestion: "Обязательно напишите ваш вопрос"
+      userQuestion: "Обязательно напишите ваш вопрос",
+      policyСheckbox: "Не забудьте принять условия политики"
     },
     //AJAX
     submitHandler: function(form) {
@@ -266,7 +304,7 @@ $(document).ready(function () {
    });
 
    // Маска для телефона
-   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+   $('[type=tel]').mask('+7 (000) 000-00-00');
 
    // Создание yandex карты
    ymaps.ready(function () {
@@ -435,5 +473,15 @@ $('.video__play').on('click', function onYouTubeIframeAPIReady() {
 function videoPlay(event) {
   event.target.playVideo();
 }
+
+//Скрипт плавной прокрутки к якорю
+$(document).ready(function(){
+  $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+      e.preventDefault();
+      var t = 1000;
+      var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+      $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
+  });
+});
 
 });
