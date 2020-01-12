@@ -97,15 +97,15 @@ $(document).ready(function () {
         required: true,
         email: true
       },
-      policyСheckbox: "required",
-      errorPlacement: function (error, element) {
-        if (element.attr("type") == "checkbox") {
-            return element.next('label').append(error);
-        }
-    
-         error.insertAfter($(element));
+      policyСheckbox: "required"
     },
-    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     // Сообщения
     messages: {
       userName: {
@@ -159,14 +159,14 @@ $(document).ready(function () {
         email: true
       },
       policyСheckbox: "required",
-      errorPlacement: function (error, element) {
-        if (element.attr("type") == "checkbox") {
-            return element.next('label').append(error);
-        }
-    
-         error.insertAfter($(element));
     },
-    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     // Сообщения
     messages: {
       userName: {
@@ -212,15 +212,15 @@ $(document).ready(function () {
       maxlength: 15
     },
     userPhone: "required",
-    policyСheckbox: "required",
-    errorPlacement: function (error, element) {
-      if (element.attr("type") == "checkbox") {
-          return element.next('label').append(error);
-      }
-  
-       error.insertAfter($(element));
+    policyCheckbox: "required"
   },
-  },
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+    }
+
+     error.insertAfter($(element));
+},
   // Сообщения
   messages: {
     userName: {
@@ -255,7 +255,7 @@ $(document).ready(function () {
     errorClass: "invalid",
     errorElement: "div",
     rules: {
-
+      
       userName: {
         required: true,
         minlength: 2,
@@ -264,15 +264,14 @@ $(document).ready(function () {
       userPhone: "required",
       userQuestion: "required",
       policyСheckbox: "required",
-      errorPlacement: function (error, element) {
-        if (element.attr("type") == "checkbox") {
-            return element.next('label').append(error);
-        }
-    
-         error.insertAfter($(element));
     },
-    },
-
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     // Сообщения
     messages: {
       userName: {
@@ -301,8 +300,8 @@ $(document).ready(function () {
         },
       });
     }
-   });
-
+  });
+  
    // Маска для телефона
    $('[type=tel]').mask('+7 (000) 000-00-00');
 

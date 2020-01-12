@@ -48,8 +48,27 @@
     min-height: 465px
 
 
-  .contacts-small
-    max-width: 340px
+  .contacts
+    &-small
+      max-width: 340px
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin: auto
+      &__text
+        font-family: Yeseva One
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 138.6%
+        text-align: center
+        text-transform: uppercase
+        color: $primary
+        width: 589px
+    &__buttons-group
+      display: flex
+      flex-direction: row
+      justify-content: center
   .buttons-group
     &__button
       display: flex
@@ -59,7 +78,7 @@
       height: 39px
       border-radius: 50%
       background-color: $primary
-      margin: 20px
+      margin: 10px
       margin-bottom: 40px
       
 

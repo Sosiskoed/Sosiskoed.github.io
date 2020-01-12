@@ -1,3 +1,8 @@
+@media screen and ( max-height: 630px )
+  .hero
+    &__scroll-down
+      display: none
+  
 @media screen and ( max-width: 1420px )
   .advantages
     &__col
@@ -10,11 +15,6 @@
   .nav
     &__item
       margin-right: 1rem
-      
-@media screen and ( min-width: 993px )
-  
-  .contacts-small
-    display: none
 
 @media screen and ( max-width: 992px )
   .nav
@@ -31,9 +31,7 @@
 
     
   .projects
-    &__row
-      flex-direction: column-reverse
-      align-items: center
+
 
   .control
     &__container
@@ -165,30 +163,14 @@
       flex-direction: column
     &__button
       min-width: 340px
-  
-  .footer
     &__menu
       display: none
-  
-  .contacts
-    &-small
+    &__container
       display: flex
       flex-direction: column
-      align-items: center
-      margin: auto
-      &__text
-        font-family: Yeseva One
-        font-style: normal
-        font-weight: normal
-        font-size: 18px
-        line-height: 138.6%
-        text-align: center
-        text-transform: uppercase
-        color: $primary
-    &__buttons-group
-      display: flex
-      flex-direction: row
-      justify-content: center
+  .contacts
+    &-small
+      order: 4
 
 
 @media screen and ( max-width: 760px )
@@ -234,7 +216,3 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
-@media screen and ( max-height: 520px )
-  .hero
-    &__scroll-down
-      display: none
