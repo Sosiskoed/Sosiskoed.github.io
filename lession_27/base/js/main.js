@@ -78,229 +78,257 @@ $(document).ready(function () {
   stepsBullets.css('left', stepsPrev.width() + 17) 
 
   //WOW JS for animations
+  var wow = new WOW(
+    {
+      mobile: false
+    }
+  );
   new WOW().init();
 
-  //Валидация формы модального окна
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // Строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      },
-      policyСheckbox: "required"
-    },
-    errorPlacement: function (error, element) {
-      if (element.attr("type") == "checkbox") {
-          return element.next('label').append(error);
-      }
-  
-       error.insertAfter($(element));
-  },
-    // Сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не длиннее пятнадцати букв"
-      },
-      userPhone: "Телефон обязателен",
-      userEmail: {
-        required: "Обязательо укажите email",
-        email: "Введите в формате: name@domain.com",
-      },
-      policyСheckbox: "Не забудьте принять условия политики"
-    },
+//ВАЛИДАЦИЯ
+//Модальное окно с благодарностью
+$(document).ready(function () {
+	// modal__thanks
+	var modalThanks = $('.modal-thanks');
+	modalThanksClose = $('.modal-thanks__close');
 
-    
-    //AJAX
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          $(form)[0].reset();
-          modal.removeClass('modal--visible');
-          thanks.addClass('modal-thanks--visible');
-          ym(65036671, 'reachGoal', 'submitForm'); return true;
-        },
-        error: function(response) {
-          console.error('Ошибка запроса ' + response);
-        },
-      });
-    }
-   });
-
-   //Валидация формы в блоке преимуществ
-  $('.advantages__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      // Строчное правило
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // правило-объект
-      userEmail: {
-        required: true,
-        email: true
-      },
-      policyСheckbox: "required",
-    },
-    errorPlacement: function (error, element) {
-      if (element.attr("type") == "checkbox") {
-          return element.next('label').append(error);
-      }
-  
-       error.insertAfter($(element));
-  },
-    // Сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не длиннее пятнадцати букв"
-      },
-      userPhone: "Телефон обязателен",
-      userEmail: {
-        required: "Обязательо укажите email",
-        email: "Введите в формате: name@domain.com",
-      },
-      policyСheckbox: "Не забудьте принять условия политики"
-    },
-    //AJAX
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          $(form)[0].reset();
-          modal.removeClass('modal--visible');
-          thanks.addClass('modal-thanks--visible');
-          ym(65036671, 'reachGoal', 'submitForm'); return true;
-        },
-        error: function(response) {
-          console.error('Ошибка запроса ' + response);
-        },
-      });
-    }
-   });
-
- //Валидация формы блока контроля
- $('.control__form').validate({
-  errorClass: "invalid",
-  errorElement: "div",
-  rules: {
-    // Строчное правило
-    userName: {
-      required: true,
-      minlength: 2,
-      maxlength: 15
-    },
-    userPhone: "required",
-    policyCheckbox: "required"
-  },
-  errorPlacement: function (error, element) {
-    if (element.attr("type") == "checkbox") {
-        return element.next('label').append(error);
-    }
-
-     error.insertAfter($(element));
-},
-  // Сообщения
-  messages: {
-    userName: {
-      required: "Имя обязательно",
-      minlength: "Имя не короче двух букв",
-      maxlength: "Имя не длиннее пятнадцати букв"
-    },
-    userPhone: "Телефон обязателен",
-    policyСheckbox: "Не забудьте принять условия политики"
-  },
-  //AJAX
-  submitHandler: function(form) {
-    $.ajax({
-      type: "POST",
-      url: "send.php",
-      data: $(form).serialize(),
-      success: function (response) {
-        $(form)[0].reset();
-        modal.removeClass('modal--visible');
-        thanks.addClass('modal-thanks--visible');
-        ym(65036671, 'reachGoal', 'submitForm'); return true;
-      },
-      error: function(response) {
-        console.error('Ошибка запроса ' + response);
-      },
-    });
-  }
- });
-
-     //Валидация формы футера
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    errorElement: "div",
-    rules: {
-      
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      userQuestion: "required",
-      policyСheckbox: "required",
-    },
-    errorPlacement: function (error, element) {
-      if (element.attr("type") == "checkbox") {
-          return element.next('label').append(error);
-      }
-  
-       error.insertAfter($(element));
-  },
-    // Сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не длиннее пятнадцати букв"
-      },
-      userPhone: "Телефон обязателен",
-      userQuestion: "Обязательно напишите ваш вопрос",
-      policyСheckbox: "Не забудьте принять условия политики"
-    },
-    //AJAX
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          $(form)[0].reset();
-          modal.removeClass('modal--visible');
-          thanks.addClass('modal-thanks--visible');
-          ym(65036671, 'reachGoal', 'submitForm'); return true;
-        },
-        error: function(response) {
-          console.error('Ошибка запроса ' + response);
-        },
-      });
-    }
+	modalThanksClose.on('click', function () {
+	modalThanks.toggleClass('modal-thanks--visible');
   });
+//Форма в модальном окне
+	$('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: 'div',
+		rules: {
+			userName: {
+				required: true,
+				minlength: 2,
+				maxlength: 15
+			},
+			userPhone: {
+				required: true,
+				minlength: 18
+			},
+			userEmail: {
+				required: true,
+				email: true
+			},
+			modalPolicyCheckbox: {
+				required: true
+			}
+		}, //сообщения
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				minlength: "Имя должно быть не короче двух букв",
+				maxlength: "Имя должно содержать не более 15 букв"
+			}, 
+			userPhone: {
+				required: "Заполните поле",
+				minlength: "Введите ваш номер полностью"
+			},
+			userEmail: {
+				required: "Заполните поле",
+				email: "Введите корректный email"
+			},
+			modalPolicyCheckbox: {
+				required: "Соглашение является обязательным"
+			}
+		},
+		errorPlacement: function (error, element) {
+			if (element.attr("type") == "checkbox") {
+				return element.next('label').append(error);
+			}
+		
+			 error.insertAfter($(element));
+		},
+		//AJAX
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					$(form)[0].reset();
+					modalThanks.toggleClass('modal-thanks--visible');
+					$(".modal-thanks__title").text();
+					ym('56934187', 'reachGoal', 'form'); return true;			
+				}
+			});
+		}   
+	});
+	
+//Форма в блоке контроля
+	$('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: 'div',
+		rules: {
+			userName: {
+				required: true,
+				minlength: 2,
+				maxlength: 15
+			},
+			userPhone: {
+				required: true,
+				minlength: 18
+			},
+			controlPolicyCheckbox: {
+				required: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				minlength: "Имя должно быть не короче двух букв",
+				maxlength: "Имя должно содержать не более 15 букв"
+			}, 
+			userPhone: {
+				required: "Заполните поле",
+				minlength: "Введите ваш номер полностью"
+			},
+			controlPolicyCheckbox: {
+				required: "Соглашение является обязательным"
+			}			
+		},
+		errorPlacement: function (error, element) {
+			if (element.attr("type") == "checkbox") {
+				return element.next('label').append(error);
+			}
+		
+			 error.insertAfter($(element));
+		},
+			//AJAX
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					$(form)[0].reset();
+					modalThanks.toggleClass('modal__thanks--visible');
+					$(".modal__thanks__title").text();
+					ym('56983390', 'reachGoal', 'back call'); return true;			
+				}
+			});
+		}   
+  });
+	//Форма в блоке преимуществ
+	$('.advantages__form').validate({
+    errorClass: "invalid",
+    errorElement: 'div',
+		rules: {
+			userName: {
+				required: true,
+				minlength: 2,
+				maxlength: 15
+			},
+			userPhone: {
+				required: true,
+				minlength: 18
+			},
+			userQuestion: "required",
+			advantagesPolicyCheckbox: {
+				required: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				minlength: "Имя должно быть не короче двух букв",
+				maxlength: "Имя должно содержать не более 15 букв"
+			}, 
+			userPhone: {
+				required: "Заполните поле",
+				minlength: "Введите ваш номер полностью"
+			},
+			userQuestion: "Введите ваш вопрос",
+			advantagesPolicyCheckbox: {
+				required: "Соглашение является обязательным"
+			}
+		},
+		errorPlacement: function (error, element) {
+			if (element.attr("type") == "checkbox") {
+				return element.next('label').append(error);
+			}
+		
+			 error.insertAfter($(element));
+		},
+			//AJAX
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					$(form)[0].reset();
+					modalThanks.toggleClass('modal-thanks--visible');
+					$(".modal-thanks__title").text();				
+				}
+			});
+    }
+		
+  });
+	//Форма в футере
+	$('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: 'div',
+		rules: {
+			userName: {
+				required: true,
+				minlength: 2,
+				maxlength: 15
+			},
+			userPhone: {
+				required: true,
+				minlength: 18
+			},
+			userQuestion: "required",
+			footerPolicyCheckbox: {
+				required: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				minlength: "Имя должно быть не короче двух букв",
+				maxlength: "Имя должно содержать не более 15 букв"
+			}, 
+			userPhone: {
+				required: "Заполните поле",
+				minlength: "Введите ваш номер полностью"
+			},
+			userQuestion: "Введите ваш вопрос",
+			footerPolicyCheckbox: {
+				required: "Соглашение является обязательным"
+			}
+		},
+		errorPlacement: function (error, element) {
+			if (element.attr("type") == "checkbox") {
+				return element.next('label').append(error);
+			}
+		
+			 error.insertAfter($(element));
+		},
+			//AJAX
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					$(form)[0].reset();
+					modalThanks.toggleClass('modal-thanks--visible');
+					$(".modal-thanks__title").text();				
+				}
+			});
+    }
+		
+  });
+}),
   
    // Маска для телефона
    $('[type=tel]').mask('+7 (000) 000-00-00');
@@ -484,3 +512,12 @@ $(document).ready(function(){
 });
 
 });
+
+
+//Функция удаления hover-эффектов для узких экранов
+function windowSize(){
+  if ($(window).width() <= '992'){
+      $('*:hover').removeClass(':hover');
+  }
+}
+$(window).on('load resize',windowSize);
