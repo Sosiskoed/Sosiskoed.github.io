@@ -489,7 +489,7 @@ $(function() {
 var playerp;
 $('.video__play').on('click', function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '465',
+    height: '100%',
     width: '100%',
     videoId: 'RHzzLqJWqHs',
     events: {
@@ -514,10 +514,5 @@ $(document).ready(function(){
 });
 
 
-//Функция удаления hover-эффектов для узких экранов
-function windowSize(){
-  if ($(window).width() <= '992'){
-      $('*:hover').removeClass(':hover');
-  }
-}
-$(window).on('load resize',windowSize);
+//Функция исправления Hover на мобильных. С ней первый же клик запускает кнопку/ссылку и тд, а не активирует ховер-эффект
+$('body').on('touchstart', function() {});

@@ -58,14 +58,14 @@
       <div class="container projects-container">
         <div class="row projects__row">
           <div class="col-50 wow slideInLeft">
-            <div class="section-title section-title--left">
-              <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
+            <div class="section-title projects__section-title section-title--left">
+              <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word projects__section-title__word">проекты</span></h2>
               <!-- /.section-title__heading -->
-              <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+              <p class="section-title__text projects__section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
             <!-- /.section-title -->
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container projects__swiper-container--slides">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
@@ -138,10 +138,12 @@
               </div>
               
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev swiper-no-swiping"></div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination swiper-no-swiping"></div>
-              <div class="swiper-button-next swiper-no-swiping"></div>
+              <div class="swiper-control-wrap">
+                <div class="swiper-button-prev swiper-no-swiping"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination swiper-no-swiping"></div>
+                <div class="swiper-button-next swiper-no-swiping"></div>
+              </div>
             </div>
           </div>
           <!-- /.col-50 -->
@@ -149,7 +151,7 @@
             <!-- Slider main container -->
             <div class="swiper-container">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
+              <div class="swiper-wrapper projects__swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
                   <div class="swiper-slide swiper-slide--second">
                     <img src="img/projects/project.jpg" alt="">
@@ -395,7 +397,7 @@
     <section class="section dreams">
       <div class="container">
         <div class="row dreams__row">
-        <div class="col-30">
+        <div class="col-30 dreams__col--left">
           
           <div class="section-title dreams__section-title section-title--dreams">
             <h3 class="section-title__heading section-title__heading--primary dreams__heading wow slideInLeft">Мы реализуем ваши самые&nbsp;смелые фантазии</h3>
@@ -417,7 +419,7 @@
           <!-- /.section-title dream__section-title -->
         </div>
         <!-- /.col-30 -->
-        <div class="col-60">
+        <div class="col-60 dreams__col--right">
           <div class="row">
           <div class="col-25 dreams__image-container dreams__image-container--first">
             <img src="img/dream/dream-1.jpg" alt="Интерьер" class="dreams__image wow fadeInDown" data-wow-delay="0.2s">
@@ -583,7 +585,7 @@
               <!-- /.team-card__name -->
               <span class="team-card__role">Проектный менеджер</span>
               <!-- /.team-card__role -->
-              <p class="team-card__exp">ОПыт работы 8 wow fadeInUp  wow fadeInUpлет</p>
+              <p class="team-card__exp">ОПыт работы 8 лет</p>
               <!-- /.team-card__exp -->
             </div>
           </div>

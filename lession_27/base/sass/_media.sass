@@ -41,11 +41,23 @@
       text-align: left
     &__button
       margin-bottom: 26px
+  .advantages
+    display: none
+  .types
+    padding-bottom: 20rem
+  .team
+    padding-bottom: 23rem
+  .clients
+    display: none
+  .container
+    width: 92%
+  .col-50
+    width: 92%
 
-  .button
-    &:hover
-      cursor: auto
-  .
+  .projects
+    &__row
+      flex-direction: column
+      margin: auto
 
   #map-yandex
     width: 900px
@@ -53,10 +65,39 @@
 
 
 @media screen and ( max-width: 760px )
-  .row
-    flex-direction: column
-    align-items: center
+  .projects
+    &__row
+      flex-direction: column
+      align-items: center
+    &__section
+      &-title
+        // position: relative
+        // top: -550px
+        text-align: center
+        margin: auto
+        &__word
+          text-align: center
+          margin: auto
+          justify-content: center
+          &::after
+            display: none
+        &__text
+          text-align: center
+          margin: auto
+      &-wrapper
+        // position: relative
+        // bottom: -100px
+      &-container
+        &--slides
+          // position: relative
+          // top: -100px
+          text-align: center
+          margin: auto
+    &__swiper
+      &-container
+        top: -50px
   .types
+    padding-bottom: 0
     &__card
       margin-bottom: 5rem
   .card
@@ -68,6 +109,67 @@
       color: $light
     &__card
       margin-bottom: 5.7rem
+
+  .swiper
+    &-wrapper
+    &-control
+      &-wrap
+        position: relative
+        margin: auto
+        display: flex
+        justify-content: center
+        left: -50px
+        max-width: 200px
+    &-pagination
+      position: relative
+      top: -20px
+      left: -20px
+      &-bullet
+        margin-right: 5px
+    &-button
+      &-prev
+        position: relative
+      &-next
+        position: relative
+  
+  .dreams
+    margin-top: 400px
+    height: 200px
+    background: $dark
+    &::before
+      display: none 
+    &__item
+      display: none
+    &__image
+      display: none
+      &-small
+        margin: auto
+        display: block
+        transform: translate(0%, -40%)
+      &-container
+        &--first
+          margin-right: 0
+    &__row
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__heading
+      margin-top: -400px
+      text-align: center
+    .col-60
+      flex-basis: 92%
+      width: 92%
+  
+  .design
+    margin-top: 0
+  
+  .team
+    &-card
+      margin-bottom: 167px
+    &__text
+      margin-top: 0
+  .card
+    margin-right: 10px
 
   #map-yandex
     width: 700px
@@ -88,6 +190,7 @@
   .title
     font-size: 1.64rem
   .hero
+    align-items: center
     &__scroll-down
       display: none
     &__text
@@ -95,6 +198,7 @@
       margin-bottom: 2.28rem
     &__content
       max-width: 22.86rem
+      margin: auto
     &__button
       display: block
       min-width: 22.86rem
@@ -105,6 +209,7 @@
     height: 200px
 
   .control
+    background-color: $dark
     &__container
       width: 100%
       background: $dark
@@ -113,7 +218,7 @@
     &__label
       color: $secondary
     &__input
-      min-width: 360px
+      min-width: 300px
       margin-bottom: 63px
       &:nth-last-child()
         margin-bottom: 28px
@@ -135,6 +240,10 @@
       font-size: 15px
       line-height: 26px
       margin-bottom: -30px
+    &__video
+      max-width: 92%
+      height: 207px
+      min-height: 100px
     
   .types
     &__section
@@ -162,6 +271,8 @@
       font-size: 15px
       line-height: 138.6%
     &__text
+      width: 270px
+      max-width: 270px
       margin-left: 0
       margin-right: auto
 
@@ -169,26 +280,7 @@
     display: none
 
   .dreams
-    margin-top: 400px
-    height: 200px
-    background: $dark
-    &::before
-     display: none 
-    &__item
-      display: none
-    &__image
-      display: none
-      &-small
-        margin: auto
-        display: block
-        transform: translate(0%, -40%)
-    &__row
-      display: flex
-      flex-direction: column
-      align-items: center
-    &__heading
-      margin-top: -400px
-      text-align: center
+    bottom: -5px
 
   .design
     background-color: $dark
@@ -203,6 +295,7 @@
       margin-bottom: 30px
       
   .team
+    padding-bottom: 50px
     background-color: $dark
     &__section
       &-title
