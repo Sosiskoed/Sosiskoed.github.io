@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
@@ -566,6 +565,11 @@ img {
   max-width: 100%;
 }
 
+/* Internet Explorer 11+ */
+_:-ms-fullscreen, :root .selector {
+  bottom: -100px;
+}
+
 .section {
   padding: 60px 0;
 }
@@ -759,6 +763,10 @@ img {
   color: #E3B873;
 }
 
+.phone:hover {
+  cursor: pointer;
+}
+
 .contacts__button {
   margin-left: 45px;
   padding: 12px 23px;
@@ -941,6 +949,52 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-col {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  right: 0;
+  height: 482px;
+  top: 100px;
+}
+
+.projects__title-block {
+  display: block;
+}
+
+.projects .col-50 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.swiper-control-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.swiper-container {
+  overflow-y: visible;
+}
+
+.swiper-container--second {
+  margin-top: -200px;
+}
+
+.swiper-container--small {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.swiper-image {
+  width: 100%;
+  max-width: 600px;
 }
 
 .swiper-slide {
@@ -951,15 +1005,15 @@ img {
       flex-wrap: wrap;
 }
 
-.swiper-slide--second {
-  margin-top: 3rem;
-}
-
 .swiper-slide__text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   margin-bottom: 2.42rem;
   padding-bottom: 2rem;
+}
+
+.swiper-slide__text:nth-child(2n) {
+  margin-left: -80px;
 }
 
 .swiper-slide__heading {
@@ -971,7 +1025,13 @@ img {
   margin-bottom: 0.64rem;
 }
 
+.swiper-pagination {
+  position: relative;
+  left: -20px;
+}
+
 .swiper-pagination-bullet {
+  margin-right: 5px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1039,6 +1099,7 @@ img {
   text-align: center;
   font-size: 1.428rem;
   line-height: 2.4rem;
+  color: #363636;
 }
 
 .control__text::before {
@@ -1185,6 +1246,7 @@ img {
 }
 
 .card__pricetag {
+  min-width: 228px;
   position: absolute;
   left: 0;
   bottom: -1.79rem;
@@ -1241,6 +1303,7 @@ img {
 }
 
 .advantages__item {
+  margin-left: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1486,6 +1549,7 @@ img {
 }
 
 .team-card {
+  margin-left: 40px;
   position: relative;
 }
 
@@ -1761,7 +1825,7 @@ img {
 }
 
 .footer .contacts-small {
-  max-width: 340px;
+  max-width: 589px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1819,26 +1883,12 @@ img {
   margin-bottom: 40px;
 }
 
-.ymap-container {
+.map-location {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background: url("../img/yandexmap.png") #ffffff no-repeat;
-  background-position: center center;
-  background-size: cover;
-  -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 40px;
-}
-
-/* Блок, в котором появится Яндекс.Карта */
-#map-yandex {
-  position: relative;
-  z-index: 7;
-  width: 1240px;
-  height: 800px;
-  cursor: pointer;
-  background-color: transparent;
+  max-height: 500px;
 }
 
 .modal, .modal-thanks {
@@ -1887,6 +1937,7 @@ img {
   border: none;
   margin: 12px;
   cursor: pointer;
+  outline: none;
 }
 
 .modal__title, .modal-thanks__title {
@@ -1946,6 +1997,12 @@ img {
   .hero__button {
     margin-bottom: 2rem;
   }
+  .modal {
+    overflow-y: scroll;
+  }
+  .modal__dialog {
+    margin-top: auto;
+  }
 }
 
 @media screen and (max-width: 1420px) {
@@ -1970,9 +2027,21 @@ img {
   .advantages__wrap {
     max-width: 63.07rem;
   }
+  .card__pricetag {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .swiper-slide__text:nth-child(2n) {
+    margin-left: -40px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .section-title__heading {
+    margin-top: 0;
+  }
   .nav {
     display: none;
   }
@@ -2012,26 +2081,13 @@ img {
   }
   .projects__row {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: auto;
-  }
-  #map-yandex {
-    width: 900px;
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .projects__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: auto;
   }
   .projects__section-title {
     text-align: center;
@@ -2055,26 +2111,20 @@ img {
     text-align: center;
     margin: auto;
   }
-  .projects__swiper-container {
-    top: -50px;
+  .swiper-wrapper--texts {
+    right: -25%;
   }
-  .types {
-    padding-bottom: 0;
+  .swiper-image {
+    margin: auto;
   }
-  .types__card {
-    margin-bottom: 5rem;
+  .swiper-container--big {
+    display: none;
   }
-  .card__text {
-    margin-left: 0;
-  }
-  .design {
-    background-color: #131313;
-  }
-  .design__section-title {
-    color: #fff;
-  }
-  .design__card {
-    margin-bottom: 5.7rem;
+  .swiper-container--small {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   .swiper-control-wrap {
     position: relative;
@@ -2101,6 +2151,30 @@ img {
   }
   .swiper-button-next {
     position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects__swiper-container {
+    top: -50px;
+  }
+  .types {
+    padding-bottom: 0;
+  }
+  .types__card {
+    margin-bottom: 5rem;
+  }
+  .card__text {
+    margin-left: 0;
+  }
+  .design {
+    background-color: #131313;
+  }
+  .design__section-title {
+    color: #fff;
+  }
+  .design__card {
+    margin-bottom: 5.7rem;
   }
   .dreams {
     margin-top: 400px;
@@ -2155,60 +2229,102 @@ img {
   .team__text {
     margin-top: 0;
   }
+  .team__description {
+    margin-bottom: 0;
+    max-width: 48rem;
+  }
+  .types__section-title {
+    margin-top: 92px;
+    margin-bottom: 40px;
+  }
+  .types__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .card {
-    margin-right: 10px;
+    margin: auto;
+    max-width: 360px;
+    margin-top: 30px;
   }
-  #map-yandex {
-    width: 700px;
-    height: 300px;
+  .card__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 138.6%;
   }
-}
-
-@media screen and (max-width: 570px) {
-  .section-title__description {
-    max-width: 21.86rem;
+  .card__item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 169.8%;
   }
-  .contacts__phone {
-    margin-right: 0;
+  .card__pricetag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 138.6%;
+  }
+  .card__text {
+    width: 270px;
+    max-width: 270px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .team {
+    padding-bottom: 50px;
+    background-color: #131313;
+  }
+  .team__section-title {
     color: #fff;
-    text-decoration: none;
   }
-  .contacts__button {
+  .team__text {
     display: none;
   }
-  .title {
-    font-size: 1.64rem;
-  }
-  .hero {
+  .team__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .hero__scroll-down {
-    display: none;
+  .team-card {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem;
+  .design {
+    background-color: #131313;
+    margin-top: 0;
   }
-  .hero__content {
-    max-width: 22.86rem;
-    margin: auto;
+  .design__section-title {
+    color: #fff;
   }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem;
+  .design__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #map-yandex {
-    width: 500px;
-    height: 200px;
+  .design__card {
+    margin-bottom: 30px;
   }
   .control {
     background-color: #131313;
   }
   .control__container {
-    width: 100%;
+    width: 95%;
     background: #131313;
   }
   .control__text {
@@ -2268,96 +2384,11 @@ img {
     height: 207px;
     min-height: 100px;
   }
-  .types__section-title {
-    margin-top: 92px;
-    margin-bottom: 40px;
-  }
-  .types__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .card {
-    margin-top: 30px;
-  }
-  .card__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 138.6%;
-  }
-  .card__item {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 169.8%;
-  }
-  .card__pricetag {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 138.6%;
-  }
-  .card__text {
-    width: 270px;
-    max-width: 270px;
-    margin-left: 0;
-    margin-right: auto;
-  }
   .advantages {
     display: none;
   }
   .dreams {
     bottom: -5px;
-  }
-  .design {
-    background-color: #131313;
-    margin-top: 0;
-  }
-  .design__section-title {
-    color: #fff;
-  }
-  .design__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .design__card {
-    margin-bottom: 30px;
-  }
-  .team {
-    padding-bottom: 50px;
-    background-color: #131313;
-  }
-  .team__section-title {
-    color: #fff;
-  }
-  .team__text {
-    display: none;
-  }
-  .team__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .team-card {
-    margin-top: 80px;
-    margin-bottom: 80px;
   }
   .clients {
     display: none;
@@ -2397,10 +2428,65 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+@media screen and (max-width: 570px) {
+  .section-title__description {
+    max-width: 21.86rem;
+  }
+  .contacts__phone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none;
+  }
+  .contacts__button {
+    display: none;
+  }
+  .title {
+    font-size: 1.64rem;
+  }
+  .hero {
+    height: 476px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__scroll-down {
+    display: none;
+  }
+  .hero__text {
+    font-size: 1.29rem;
+    margin-bottom: 2.28rem;
+  }
+  .hero__content {
+    top: -40px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 22.86rem;
+    margin: auto;
+  }
+  .hero__button {
+    display: block;
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem;
+  }
+  .projects {
+    padding-top: 0;
+  }
   .contacts-small {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+  }
+  .swiper-slide__text:nth-child(2n) {
+    margin-left: 0;
+  }
+  .swiper-wrapper--texts {
+    right: -15%;
+  }
+  .team__description {
+    margin-bottom: 0;
+    max-width: 280px;
   }
 }
 
@@ -2408,6 +2494,9 @@ img {
   .hero__button, .control__button, .footer__button {
     min-width: 230px;
     max-width: 260px;
+  }
+  .swiper-wrapper--texts {
+    right: -10%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
