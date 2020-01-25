@@ -1,0 +1,71 @@
+.header
+  display: flex
+  justify-content: space-between
+  position: absolute
+  width: 100%
+  z-index: 99
+  height: 82px
+  &__block
+    &--left
+      flex-grow: 23
+      max-width: 460px
+      background: #FAEABC url('../img/header/header-bg-left.jpeg') no-repeat left
+    &--right
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-right: 100px
+      flex-grow: 71
+      max-width: 1367px
+      background: #FAEABC url('../img/header/header-bg-right.jpeg') no-repeat right
+    &--logo
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow-y: visible
+      background: transparent url(../img/header/flag.svg) no-repeat center
+      flex-grow: 1
+      width: 109px
+      padding-top: 10px
+  &__img
+    position: absolute
+    &--logo
+      position: relative
+      z-index: 100
+
+.name-block
+  margin-left: 24px
+  &__name
+    text-transform: uppercase
+    display: block
+    font-size: 25px
+    color: #393939
+    font-weight: bold
+    margin: 0
+  &__subname
+    font-size: 13px
+    color: #F64747
+    font-weight: 200
+    margin: 0
+
+.tel-block
+  &__icon
+    width: 15px
+    height: 15px
+  &__phone
+    display: block
+    margin-bottom: 8px
+    color: #393939
+    text-decoration: none
+    font-size: 16px
+    &--big
+      font-size: 21px
+    &:hover
+      cursor: pointer
+
+.call-me
+  &__reference
+    color: #F64747
+    text-decoration-style: dotted
+    &:hover
+      cursor: pointer

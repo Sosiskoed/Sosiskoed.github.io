@@ -1,0 +1,44 @@
+.hero
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  padding-top: 137px
+  &__title
+    flex-basis: 100%
+    text-align: center
+  &__subtitle
+    flex-basis: 100%
+    text-align: center
+
+  &__block
+    &--left
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+      background: white url('../img/hero/bread-bg.jpeg') no-repeat bottom right
+      flex-basis: 60%
+      width: 100%
+      min-height: 427px
+    &--right
+
+.cards-block
+  display: flex
+  justify-content: space-between
+  &__card
+    margin-right: 32px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.card
+  &__text
+    max-width: 149px
+    text-align: center
+    font-size: 22px
+    letter-spacing: -2px
+    font-weight: 600
+    margin-bottom: -130px
+    z-index: 1
+
